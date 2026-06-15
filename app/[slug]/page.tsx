@@ -111,7 +111,7 @@ export default function DestinationPage({ params }: DestinationPageProps) {
             </h2>
           </div>
           <div className="flex flex-col gap-4">
-            {destination.flights.map((flight) => (
+            {destination.flights.map((flight: any) => (
               <FlightCard key={flight.id} flight={flight} />
             ))}
           </div>
