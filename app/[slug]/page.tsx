@@ -127,7 +127,7 @@ export default function DestinationPage({ params }: DestinationPageProps) {
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {destination.thingsToDo.map((item) => (
+            {destination.thingsToDo.map((item: any) => (
               <div
                 key={item.id}
                 className="overflow-hidden rounded-2xl bg-white shadow-card"
