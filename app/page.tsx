@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 import Link from "next/link";
 import { destinations } from "@/data/destinations";
 
@@ -26,10 +27,11 @@ export default function HomePage() {
             destinations, all in one place.
           </p>
 
-          <div className="mt-8 rounded-2xl bg-white p-4 shadow-card">
-            <iframe
-              src="https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&powered_by=true&locale=en&show_header=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=4478"
-              className="min-h-[420px] w-full border-0"
+          <div className="mt-8 rounded-2xl bg-white p-6 shadow-card">
+            <Script
+              async
+              src="https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&locale=en&powered_by=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=3411"
+              strategy="afterInteractive"
             />
           </div>
         </div>
