@@ -95,7 +95,7 @@ export default function DestinationPage({ params }: DestinationPageProps) {
             </h2>
           </div>
           <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-2 no-scrollbar sm:-mx-6 sm:px-6">
-            {destination.hotels.map((hotel) => (
+            {destination.hotels.map((hotel: any) => (
               <HotelCard key={hotel.id} hotel={hotel} />
             ))}
           </div>
