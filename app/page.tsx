@@ -71,7 +71,7 @@ export default function HomePage() {
                 </p>
                 <p className="mt-3 text-sm font-semibold text-brand-600">
                   From $
-                  {Math.min(...destination.hotels.map((h) => h.pricePerNight))}{" "}
+                  {Math.min(...destination.hotels.map((h: any) => h.pricePerNight))}{" "}
                   / night
                 </p>
               </div>
