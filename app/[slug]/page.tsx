@@ -15,7 +15,7 @@ interface DestinationPageProps {
  * automatically get its own static page here.
  */
 export function generateStaticParams() {
-  return destinations.map((destination) => ({ slug: destination.slug }));
+ return destinations.map((destination: any) => ({ slug: destination.slug }));
 }
 
 export function generateMetadata({
