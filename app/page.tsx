@@ -1,13 +1,11 @@
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
-import SearchBar from "@/components/SearchBar";
 import { destinations } from "@/data/destinations";
 
 export default function HomePage() {
   return (
     <div>
-      {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-600 to-brand-700 pb-24 pt-16 sm:pb-32 sm:pt-24">
         <div className="absolute inset-0 opacity-20">
           <Image
@@ -29,35 +27,22 @@ export default function HomePage() {
             destinations, all in one place.
           </p>
 
-          <div className="mt-8">
-            <SearchBar />
+          <div className="mt-8 rounded-2xl bg-white p-6 shadow-card">
+            <Script
+              async
+              strategy="afterInteractive"
+              src="https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&powered_by=true&locale=en&show_header=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=4478"
+            />
           </div>
         </div>
       </section>
 
-      {/* Flight Search Widget */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="rounded-2xl bg-white p-6 shadow-card">
-          <h2 className="mb-4 text-2xl font-bold text-gray-900">
-            Search Cheap Flights
-          </h2>
-
-          <Script
-            async
-            strategy="afterInteractive"
-            src="https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&powered_by=true&locale=en&show_header=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=4478"
-          />
-        </div>
-      </section>
-
-      {/* Popular destinations */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="mb-8 flex items-end justify-between">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
               Popular destinations
             </h2>
-
             <p className="mt-1 text-sm text-gray-500">
               Hand-picked cities with the best hotel and flight deals.
             </p>
@@ -85,11 +70,9 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold text-gray-900">
                   {destination.name}
                 </h3>
-
                 <p className="text-sm text-gray-500">
                   {destination.shortTagline}
                 </p>
-
                 <p className="mt-3 text-sm font-semibold text-brand-600">
                   From $
                   {Math.min(
@@ -103,19 +86,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Value props */}
       <section className="bg-white py-16">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 sm:grid-cols-3 sm:px-6">
           <ValueProp
             title="Best price guarantee"
             description="We compare deals across top travel providers so you don't have to."
           />
-
           <ValueProp
             title="Curated destinations"
             description="Every destination page is packed with hotels, flights, and local tips."
           />
-
           <ValueProp
             title="Book with confidence"
             description="All bookings happen securely on trusted partner sites like Booking.com and Skyscanner."
@@ -138,9 +118,7 @@ function ValueProp({
       <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
         <CheckIcon />
       </div>
-
       <h3 className="text-base font-semibold text-gray-900">{title}</h3>
-
       <p className="mt-2 text-sm text-gray-500">{description}</p>
     </div>
   );
