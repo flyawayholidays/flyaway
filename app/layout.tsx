@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -27,6 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <Script id="travelpayouts" strategy="afterInteractive">
+          {`
+            (function () {
+              var script = document.createElement("script");
+              script.async = 1;
+              script.src = "https://tp-em.com/NTQwMDg3.js?t=540087";
+              document.head.appendChild(script);
+            })();
+          `}
+        </Script>
+
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>
