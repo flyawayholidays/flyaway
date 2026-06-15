@@ -12,6 +12,7 @@ export default function Footer() {
               </span>
               <span className="text-lg font-bold text-gray-900">Flyaway</span>
             </div>
+
             <p className="mt-3 max-w-sm text-sm text-gray-500">
               Flyaway helps you find inspiration and great deals for your next
               trip. We partner with trusted booking providers to bring you
@@ -24,22 +25,26 @@ export default function Footer() {
               <h4 className="text-sm font-semibold text-gray-900">
                 Destinations
               </h4>
+
               <ul className="mt-3 space-y-2 text-sm text-gray-500">
                 <li>
                   <Link href="/paris" className="hover:text-brand-600">
                     Paris
                   </Link>
                 </li>
+
                 <li>
                   <Link href="/london" className="hover:text-brand-600">
                     London
                   </Link>
                 </li>
+
                 <li>
                   <Link href="/tokyo" className="hover:text-brand-600">
                     Tokyo
                   </Link>
                 </li>
+
                 <li>
                   <Link href="/rome" className="hover:text-brand-600">
                     Rome
@@ -47,12 +52,39 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+
             <div>
-              <h4 className="text-sm font-semibold text-gray-900">Company</h4>
+              <h4 className="text-sm font-semibold text-gray-900">
+                Company
+              </h4>
+
               <ul className="mt-3 space-y-2 text-sm text-gray-500">
-                <li className="hover:text-brand-600">About</li>
-                <li className="hover:text-brand-600">Contact</li>
-                <li className="hover:text-brand-600">Privacy Policy</li>
+                <li>
+                  <Link href="/about" className="hover:text-brand-600">
+                    About
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/contact" className="hover:text-brand-600">
+                    Contact
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/privacy-policy"
+                    className="hover:text-brand-600"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/terms" className="hover:text-brand-600">
+                    Terms & Conditions
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -64,6 +96,7 @@ export default function Footer() {
             are affiliate links, meaning we may earn a commission if you make
             a booking through them, at no extra cost to you.
           </p>
+
           <p className="mt-2">
             © {new Date().getFullYear()} Flyaway. All rights reserved.
           </p>
