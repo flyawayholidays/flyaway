@@ -1,8 +1,33 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { destinations } from "@/data/destinations";
+import { useEffect } from "react";
 
 export default function HomePage() {
+  useEffect(() => {
+    const script1 = document.createElement("script");
+    script1.src =
+      "https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&locale=en&powered_by=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=3411";
+    script1.async = true;
+    script1.charset = "utf-8";
+    const container1 = document.getElementById("affiliate-widget-1");
+    if (container1) {
+      container1.appendChild(script1);
+    }
+
+    const script2 = document.createElement("script");
+    script2.src =
+      "https://tpwdgt.com/content?currency=gbp&trs=540087&shmarker=740010&powered_by=true&locale=en&campaign_id=111&promo_id=4484";
+    script2.async = true;
+    script2.charset = "utf-8";
+    const container2 = document.getElementById("affiliate-widget-2");
+    if (container2) {
+      container2.appendChild(script2);
+    }
+  }, []);
+
   return (
     <div>
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-600 to-brand-700 pb-24 pt-16 sm:pb-32 sm:pt-24">
@@ -30,10 +55,12 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <div
+          id="affiliate-widget-1"
           className="rounded-2xl bg-white p-6 shadow-card"
-          dangerouslySetInnerHTML={{
-            __html: `<script async charset="utf-8" src="https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&locale=en&powered_by=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=3411"></script>`,
-          }}
+        />
+        <div
+          id="affiliate-widget-2"
+          className="mt-4 rounded-2xl bg-white p-6 shadow-card"
         />
       </section>
 
