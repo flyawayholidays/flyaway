@@ -25,14 +25,16 @@ export default function HomePage() {
             Compare hotel and flight deals across the world&apos;s best
             destinations, all in one place.
           </p>
-
-          <div
-            className="mt-8 rounded-2xl bg-white p-6 shadow-card"
-            dangerouslySetInnerHTML={{
-              __html: `<script async charset="utf-8" src="https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&locale=en&powered_by=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=3411"></script>`,
-            }}
-          />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+        <div
+          className="rounded-2xl bg-white p-6 shadow-card"
+          dangerouslySetInnerHTML={{
+            __html: `<script async charset="utf-8" src="https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&locale=en&powered_by=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=3411"></script>`,
+          }}
+        />
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
