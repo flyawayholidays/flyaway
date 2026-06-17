@@ -32,13 +32,6 @@ export default function HomePage() {
               __html: `<script async charset="utf-8" src="https://tpwdgt.com/content?currency=usd&trs=540087&shmarker=740010&locale=en&powered_by=true&limit=3&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=3411"></script>`,
             }}
           />
-
-          <div
-            className="mt-4 rounded-2xl bg-white p-6 shadow-card"
-            dangerouslySetInnerHTML={{
-              __html: `<script async charset="utf-8" src="https://tpwdgt.com/content?currency=gbp&trs=540087&shmarker=740010&powered_by=true&locale=en&campaign_id=111&promo_id=4484"></script>`,
-            }}
-          />
         </div>
       </section>
 
