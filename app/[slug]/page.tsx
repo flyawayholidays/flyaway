@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import styles from '@/app/globals.css';
 
 interface Flight {
   id: number;
@@ -89,7 +88,7 @@ export default function FlightsPage() {
 
   const bookFlight = () => {
     if (!selectedFlight) return;
-    alert(`✓ Booking with ${selectedFlight.airline} for $${selectedFlight.price}\n\nRedirecting to payment...`);
+    alert(`Booking with ${selectedFlight.airline} for $${selectedFlight.price}\n\nRedirecting to payment...`);
     setShowModal(false);
     setSelectedFlight(null);
   };
@@ -613,10 +612,9 @@ export default function FlightsPage() {
         }
       `}</style>
 
-      {/* Search Section */}
       <section className="search-section">
         <div className="container">
-          <h2 className="search-title">Find & Book Your Perfect Flight</h2>
+          <h2 className="search-title">Find &amp; Book Your Perfect Flight</h2>
           <form className="search-form">
             <div className="form-group">
               <label htmlFor="from">From</label>
@@ -647,9 +645,7 @@ export default function FlightsPage() {
         </div>
       </section>
 
-      {/* Main Content */}
       <main>
-        {/* Sidebar Filters */}
         <aside className="filters">
           <div className="filter-group">
             <h3>Price</h3>
@@ -719,7 +715,6 @@ export default function FlightsPage() {
           </div>
         </aside>
 
-        {/* Results Section */}
         <section>
           <div className="results-header">
             <h1>SFO → JFK</h1>
@@ -795,7 +790,6 @@ export default function FlightsPage() {
         </section>
       </main>
 
-      {/* Modal */}
       <div className={`modal-overlay ${!showModal ? 'hidden' : ''}`}>
         <div className="modal">
           <div className="modal-header">
@@ -828,12 +822,12 @@ export default function FlightsPage() {
                 </div>
 
                 <div className="form-group">
-                  <h3 style={{ marginBottom: 'var(--spacing-md)' }}>Duration & Stops</h3>
+                  <h3 style={{ marginBottom: 'var(--spacing-md)' }}>Duration &amp; Stops</h3>
                   <p>{selectedFlight.duration} • {selectedFlight.stopinfo}</p>
                 </div>
 
                 <div className="form-group">
-                  <h3 style={{ marginBottom: 'var(--spacing-md)' }}>What's Included</h3>
+                  <h3 style={{ marginBottom: 'var(--spacing-md)' }}>What&apos;s Included</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--spacing-md)' }}>
                     <div><span style={{ color: 'var(--success-green)', marginRight: '8px' }}>✓</span> Carry-on bag</div>
                     <div><span style={{ color: 'var(--success-green)', marginRight: '8px' }}>✓</span> Personal item</div>
